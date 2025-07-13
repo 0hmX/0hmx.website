@@ -19,32 +19,62 @@ createRoot(document.getElementById('root')!).render(
       <Router>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route index element={
-              <>
-                <HeroSection />
-                <HeroImage />
-                <Biography />
-                <CallToAction />
-              </>
-            } />
-            <Route path="blogs" element={
-              <Suspense fallback={<div>Loading Blog Page...</div>}>
-                <LazyBlogPage />
-              </Suspense>
-            } />
-            <Route path="blogs/:id" element={
-              <Suspense fallback={<div>Loading Blog Post...</div>}>
-                <LazyBlogPostDetail />
-              </Suspense>
-            } />
-            <Route path="contact" element={
-              <Suspense fallback={<div>Loading Contact Page...</div>}>
-                <LazyContactPage />
-              </Suspense>
-            } />
+            <Route
+              index
+              element={
+                <>
+                  <HeroSection />
+                  <HeroImage />
+                  <Biography />
+                  <CallToAction />
+                </>
+              }
+            />
+            <Route
+              path="blogs"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                      Loading Blog Page Content...
+                    </div>
+                  }
+                >
+                  <LazyBlogPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="blogs/:id"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                      Loading Blog Post Content...
+                    </div>
+                  }
+                >
+                  <LazyBlogPostDetail />
+                </Suspense>
+              }
+            />
+            <Route
+              path="contact"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                      Loading Contact Page Content...
+                    </div>
+                  }
+                >
+                  <LazyContactPage />
+                </Suspense>
+              }
+            />
           </Route>
         </Routes>
       </Router>
     </ErrorBoundary>
-  </StrictMode>
+  </StrictMode>,
 );

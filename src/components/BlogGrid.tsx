@@ -20,7 +20,7 @@ const BlogGrid: React.FC<BlogGridProps> = ({ posts }) => {
                 className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            
+
             <div className="space-y-3">
               <div className="flex items-center space-x-4 text-sm text-gray-500">
                 <span className="px-2 py-1 bg-gray-100 rounded text-xs font-medium uppercase tracking-wide">
@@ -35,15 +35,13 @@ const BlogGrid: React.FC<BlogGridProps> = ({ posts }) => {
                   <span>{post.readTime}</span>
                 </div>
               </div>
-              
+
               <h3 className="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
                 {post.title}
               </h3>
-              
-              <p className="text-gray-600 leading-relaxed">
-                {post.excerpt}
-              </p>
-              
+
+              <p className="text-gray-600 leading-relaxed">{post.excerpt}</p>
+
               <span className="text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-200 border-b border-gray-800 hover:border-gray-600 pb-1">
                 READ MORE
               </span>

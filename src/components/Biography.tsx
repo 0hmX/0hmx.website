@@ -11,10 +11,8 @@ const Biography = () => {
             <p className="text-gray-800 leading-relaxed">
               <strong>{en.biography.intro}</strong>
             </p>
-            
-            <p className="text-gray-700 leading-relaxed">
-              {en.biography.paragraph1}
-            </p>
+
+            <p className="text-gray-700 leading-relaxed">{en.biography.paragraph1}</p>
           </div>
 
           {/* Right Column - Quote */}
@@ -22,14 +20,17 @@ const Biography = () => {
             <blockquote className="text-gray-700 leading-relaxed italic">
               {en.biography.quote}
             </blockquote>
-            
+
             <p className="text-gray-700 leading-relaxed">
               <strong>{en.biography.paragraph2}</strong>
             </p>
-            
+
             {/* Signature */}
             <div className="pt-8">
-              <div className="text-5xl font-serif italic text-gray-800" style={{ fontFamily: 'cursive' }}>
+              <div
+                className="text-5xl font-serif italic text-gray-800"
+                style={{ fontFamily: 'cursive' }}
+              >
                 {en.biography.signature}
               </div>
             </div>

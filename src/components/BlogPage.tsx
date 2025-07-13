@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BlogGrid from './BlogGrid';
 import useBlogPosts from '../hooks/useBlogPosts';
 import en from '../locales/en.json';
@@ -28,9 +29,7 @@ const BlogPage = () => {
           <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
             {en.blog_page.header_title}
           </h1>
-          <p className="text-xl max-w-2xl mx-auto leading-relaxed">
-            Error: {error}
-          </p>
+          <p className="text-xl max-w-2xl mx-auto leading-relaxed">Error: {error}</p>
         </div>
       </section>
     );
@@ -78,17 +77,18 @@ const BlogPage = () => {
                   <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                     {featuredPost.title}
                   </h2>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {featuredPost.excerpt}
-                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{featuredPost.excerpt}</p>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-6">
                     <span>{featuredPost.date}</span>
                     <span>•</span>
                     <span>{featuredPost.readTime}</span>
                   </div>
-                  <a href={`/blogs/${featuredPost.id}`} className="self-start text-sm font-medium text-white hover:text-gray-300 transition-colors duration-200 border-b border-white hover:border-gray-300 pb-1">
+                  <Link
+                    to={`/blogs/${featuredPost.id}`}
+                    className="self-start text-sm font-medium text-white hover:text-gray-300 transition-colors duration-200 border-b border-white hover:border-gray-300 pb-1"
+                  >
                     {en.blog_page.read_full_article}
-                  </a>
+                  </Link>
                 </div>
                 <div className="h-64 md:h-auto">
                   <img
@@ -110,9 +110,7 @@ const BlogPage = () => {
 
         {/* Newsletter Signup */}
         <div className="bg-gray-50 rounded-lg p-8 md:p-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            {en.blog_page.newsletter_title}
-          </h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">{en.blog_page.newsletter_title}</h3>
           <p className="text-gray-600 mb-6 max-w-md mx-auto">
             {en.blog_page.newsletter_description}
           </p>

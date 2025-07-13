@@ -12,7 +12,7 @@ const HeroImage = () => {
             alt={en.hero_image.alt_text}
             className="w-full h-[600px] object-cover"
           />
-          
+
           {/* Play Button Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
             <button className="group relative">

@@ -10,12 +10,14 @@ export const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'The Power of Starting Small: My $199 Journey',
-    excerpt: 'How a simple screen printing kit from eBay became the foundation of my entrepreneurial journey.',
+    excerpt:
+      'How a simple screen printing kit from eBay became the foundation of my entrepreneurial journey.',
     content: BlogPost1Content,
     date: 'March 15, 2024',
     readTime: '5 min read',
     category: 'Entrepreneurship',
-    image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image:
+      'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     id: '2',
@@ -25,17 +27,19 @@ export const blogPosts: BlogPost[] = [
     date: 'March 8, 2024',
     readTime: '7 min read',
     category: 'Design',
-    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image:
+      'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     id: '3',
     title: 'Building a Personal Brand Without a Degree',
-    excerpt: 'Why authenticity and hard work matter more than credentials in today\'s economy.',
+    excerpt: "Why authenticity and hard work matter more than credentials in today's economy.",
     content: BlogPost3Content,
     date: 'February 28, 2024',
     readTime: '6 min read',
     category: 'Personal Branding',
-    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image:
+      'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     id: '4',
@@ -45,16 +49,19 @@ export const blogPosts: BlogPost[] = [
     date: 'February 20, 2024',
     readTime: '8 min read',
     category: 'Business',
-    image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image:
+      'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     id: '5',
     title: 'Lessons from Failure: What Dropping Out Taught Me',
-    excerpt: 'Sometimes the biggest risks lead to the most valuable lessons and unexpected opportunities.',
+    excerpt:
+      'Sometimes the biggest risks lead to the most valuable lessons and unexpected opportunities.',
     content: BlogPost5Content,
     date: 'February 12, 2024',
     readTime: '9 min read',
     category: 'Personal Growth',
-    image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800'
-  }
+    image:
+      'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
 ];
