@@ -1,23 +1,55 @@
 import React from 'react';
 import BlogGrid from './BlogGrid';
-import { blogPosts } from '../data/blogPosts';
-import { BlogPost } from '../types/blog';
+import useBlogPosts from '../hooks/useBlogPosts';
 import en from '../locales/en.json';
 
 const BlogPage = () => {
-  const allPosts = blogPosts;
+  const { posts, isLoading, error } = useBlogPosts();
 
-  // Map MDX posts to BlogPost interface
-  const posts: BlogPost[] = allPosts.map(post => ({
-    id: post.id,
-    title: post.title,
-    excerpt: post.excerpt || '',
-    date: post.date,
-    readTime: post.readTime || '',
-    category: post.category || 'Uncategorized',
-    image: post.image || '',
-    content: post.content,
-  }));
+  if (isLoading) {
+    return (
+      <section className="w-full px-8 py-16 text-center">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+            {en.blog_page.header_title}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Loading blog posts...
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="w-full px-8 py-16 text-center text-red-600">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+            {en.blog_page.header_title}
+          </h1>
+          <p className="text-xl max-w-2xl mx-auto leading-relaxed">
+            Error: {error}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (posts.length === 0) {
+    return (
+      <section className="w-full px-8 py-16 text-center">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+            {en.blog_page.header_title}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            No blog posts found.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   const featuredPost = posts[0]; // Assuming the first post is the featured one
 

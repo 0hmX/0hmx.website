@@ -1,10 +1,20 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
+import useBlogPosts from '../hooks/useBlogPosts';
 
 const BlogPostDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const post = blogPosts.find(p => p.id === id);
+  const { posts, isLoading, error } = useBlogPosts();
+
+  if (isLoading) {
+    return <div className="text-center py-16">Loading blog post...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center py-16 text-red-600">Error: {error}</div>;
+  }
+
+  const post = posts.find(p => p.id === id);
 
   if (!post) {
     return <div className="text-center py-16">Blog post not found.</div>;
@@ -18,7 +28,7 @@ const BlogPostDetail: React.FC = () => {
         <img src={post.image} alt={post.title} className="w-full rounded-lg mb-8" />
       )}
       <div className="prose prose-lg max-w-none">
-        <p>{post.content}</p>
+        <post.content />
       </div>
     </div>
   );
