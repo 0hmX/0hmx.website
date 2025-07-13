@@ -1,7 +1,6 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "homepage": "https://0hmx.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "deploy": "pnpm build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
+    "deploy": "pnpm build && cd dist && git add . && git commit -m \"Deploy from main repo\" && git push origin main && cd .."
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",
