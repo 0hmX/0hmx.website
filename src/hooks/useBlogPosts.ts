@@ -26,8 +26,13 @@ const useBlogPosts = (): UseBlogPostsResult => {
       setIsLoading(true);
       setError(null);
       try {
-        cachedPosts = blogPosts; // Cache the data
-        setPosts(blogPosts);
+        const sortedPosts = [...blogPosts].sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateB.getTime() - dateA.getTime(); // Sort descending (newest first)
+        });
+        cachedPosts = sortedPosts; // Cache the sorted data
+        setPosts(sortedPosts);
         setIsLoading(false);
       } catch (err) {
         setError('Failed to load blog posts.');

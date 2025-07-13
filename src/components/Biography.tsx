@@ -28,8 +28,7 @@ const Biography = () => {
             {/* Signature */}
             <div className="pt-8">
               <div
-                className="text-5xl font-serif italic text-gray-800"
-                style={{ fontFamily: 'cursive' }}
+                className="text-5xl font-handwritten italic text-gray-800"
               >
                 {en.biography.signature}
               </div>

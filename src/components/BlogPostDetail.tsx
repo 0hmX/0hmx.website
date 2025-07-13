@@ -28,7 +28,6 @@ const BlogPostDetail: React.FC = () => {
       <p className="text-gray-600 mb-8">
         {post.date} by {post.author || 'Unknown Author'}
       </p>
-      {post.image && <img src={post.image} alt={post.title} className="w-full rounded-lg mb-8" />}
       <div className="prose prose-lg max-w-none">
         <post.content />
       </div>

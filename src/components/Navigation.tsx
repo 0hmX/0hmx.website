@@ -20,7 +20,7 @@ const DesktopNavigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="w-full py-6 px-8">
+    <nav className="w-full py-6 px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <ul className="flex justify-center space-x-12">
           {navItems.map((item, index) => (

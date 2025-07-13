@@ -1,3 +1,11 @@
+@import "@fontsource/inter";
+@import "@fontsource/fira-code";
+@import "@fontsource/pacifico";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}

@@ -6,7 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary.tsx';
 import HeroSection from './components/HeroSection.tsx';
 import HeroImage from './components/HeroImage.tsx';
 import Biography from './components/Biography.tsx';
-import CallToAction from './components/CallToAction.tsx';
+
 import './index.css';
 
 const LazyBlogPage = lazy(() => import('./components/BlogPage.tsx'));
@@ -26,14 +26,19 @@ createRoot(document.getElementById('root')!).render(
                   <HeroSection />
                   <HeroImage />
                   <Biography />
-                  <CallToAction />
                 </>
               }
             />
             <Route
               path="blogs"
               element={
-                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">Loading Blog Page...</div>}>
+                <Suspense
+                  fallback={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                      Loading Blog Page...
+                    </div>
+                  }
+                >
                   <LazyBlogPage />
                 </Suspense>
               }
@@ -41,7 +46,13 @@ createRoot(document.getElementById('root')!).render(
             <Route
               path="blogs/:id"
               element={
-                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">Loading Blog Post...</div>}>
+                <Suspense
+                  fallback={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                      Loading Blog Post...
+                    </div>
+                  }
+                >
                   <LazyBlogPostDetail />
                 </Suspense>
               }
@@ -49,7 +60,13 @@ createRoot(document.getElementById('root')!).render(
             <Route
               path="contact"
               element={
-                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">Loading Contact Page...</div>}>
+                <Suspense
+                  fallback={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                      Loading Contact Page...
+                    </div>
+                  }
+                >
                   <LazyContactPage />
                 </Suspense>
               }
