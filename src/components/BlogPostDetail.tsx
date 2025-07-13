@@ -2,12 +2,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import useBlogPosts from '../hooks/useBlogPosts';
 
+import SkeletonBlogPostDetail from './SkeletonBlogPostDetail';
+
 const BlogPostDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { posts, isLoading, error } = useBlogPosts();
 
   if (isLoading) {
-    return <div className="text-center py-16">Loading blog post...</div>;
+    return <SkeletonBlogPostDetail />;
   }
 
   if (error) {

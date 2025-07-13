@@ -4,19 +4,29 @@ import BlogGrid from './BlogGrid';
 import useBlogPosts from '../hooks/useBlogPosts';
 import en from '../locales/en.json';
 
+import SkeletonBlogCard from './SkeletonBlogCard';
+
+import SkeletonFeaturedPost from './SkeletonFeaturedPost';
+
 const BlogPage = () => {
   const { posts, isLoading, error } = useBlogPosts();
 
   if (isLoading) {
     return (
-      <section className="w-full px-8 py-16 text-center">
+      <section className="w-full px-8 py-16">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
-            {en.blog_page.header_title}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Loading blog posts...
-          </p>
+          <div className="text-center mb-16">
+            <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+              {en.blog_page.header_title}
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              {en.blog_page.header_description}
+            </p>
+          </div>
+          <SkeletonFeaturedPost />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[...Array(6)].map((_, i) => <SkeletonBlogCard key={i} />)}
+          </div>
         </div>
       </section>
     );
