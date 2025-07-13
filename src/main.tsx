@@ -6,7 +6,7 @@ import ErrorBoundary from './components/ErrorBoundary.tsx';
 import HeroSection from './components/HeroSection.tsx';
 import HeroImage from './components/HeroImage.tsx';
 import Biography from './components/Biography.tsx';
-
+import SkeletonBlogCard from './components/SkeletonBlogCard.tsx';
 import './index.css';
 
 const LazyBlogPage = lazy(() => import('./components/BlogPage.tsx'));
