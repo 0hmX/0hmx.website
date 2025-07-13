@@ -73,12 +73,12 @@ const BlogPage = () => {
 
         {/* Blog Timeline */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Articles</h2>
+          <h2 className="text-2xl font-mono text-gray-900 mb-8">Latest Articles</h2>
           <div className="space-y-8">
             {posts.map((post) => (
-              <div key={post.id} className="border-l-4 border-gray-200 pl-4 relative">
+              <div key={post.id} className="border-l-4 border-gray-200 pl-4 relative font-mono">
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-gray-900 rounded-full"></div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl text-gray-900 mb-2">
                   <Link to={`/blogs/${post.id}`} className="hover:text-gray-700 transition-colors duration-200">
                     {post.title}
                   </Link>
