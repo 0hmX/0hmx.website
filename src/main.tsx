@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection.tsx';
 import HeroImage from './components/HeroImage.tsx';
 import Biography from './components/Biography.tsx';
 import SkeletonBlogCard from './components/SkeletonBlogCard.tsx';
+import SkeletonFeaturedPost from './components/SkeletonFeaturedPost.tsx';
 import './index.css';
 
 const LazyBlogPage = lazy(() => import('./components/BlogPage.tsx'));
@@ -34,8 +35,8 @@ createRoot(document.getElementById('root')!).render(
               element={
                 <Suspense
                   fallback={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
-                      <SkeletonBlogCard />
+                    <div className="min-h-screen min-w-screen flex">
+                      <SkeletonFeaturedPost />
                     </div>
                   }
                 >
@@ -48,7 +49,7 @@ createRoot(document.getElementById('root')!).render(
               element={
                 <Suspense
                   fallback={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                    <div className="min-h-screen min-w-screen flex">
                       <SkeletonBlogCard />
                     </div>
                   }
@@ -62,7 +63,7 @@ createRoot(document.getElementById('root')!).render(
               element={
                 <Suspense
                   fallback={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
+                    <div className="min-h-screen min-w-screen flex">
                       <LazyBlogPostDetail />
                     </div>
                   }

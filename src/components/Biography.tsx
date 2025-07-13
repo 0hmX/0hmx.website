@@ -5,33 +5,17 @@ const Biography = () => {
   return (
     <section className="w-full px-8 mb-16 font-mono">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* Left Column - Bio */}
-          <div className="space-y-6">
-            <p className="text-gray-800 leading-relaxed">
-              <strong>{en.biography.intro}</strong>
-            </p>
+        <div className="space-y-6">
+          <p className="text-gray-800 leading-relaxed">
+            {en.biography.paragraph}
+          </p>
 
-            <p className="text-gray-700 leading-relaxed">{en.biography.paragraph1}</p>
-          </div>
-
-          {/* Right Column - Quote */}
-          <div className="space-y-8">
-            <blockquote className="text-gray-700 leading-relaxed italic">
-              {en.biography.quote}
-            </blockquote>
-
-            <p className="text-gray-700 leading-relaxed">
-              <strong>{en.biography.paragraph2}</strong>
-            </p>
-
-            {/* Signature */}
-            <div className="pt-8">
-              <div
-                className="text-5xl font-handwritten italic text-gray-800"
-              >
-                {en.biography.signature}
-              </div>
+          {/* Signature */}
+          <div className="pt-8 text-right">
+            <div
+              className="text-5xl font-handwritten italic text-gray-800"
+            >
+              {en.biography.signature}
             </div>
           </div>
         </div>

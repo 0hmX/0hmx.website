@@ -28,7 +28,7 @@ const BlogPostDetail: React.FC = () => {
       <p className="text-gray-600 mb-8">
         {post.date} by {post.author || 'Unknown Author'}
       </p>
-      <div className="prose prose-lg max-w-none">
+      <div className="prose prose-lg max-w-none font-mono">
         <post.content />
       </div>
     </div>
