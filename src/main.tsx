@@ -33,13 +33,7 @@ createRoot(document.getElementById('root')!).render(
             <Route
               path="blogs"
               element={
-                <Suspense
-                  fallback={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
-                      Loading Blog Page Content...
-                    </div>
-                  }
-                >
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">Loading Blog Page...</div>}>
                   <LazyBlogPage />
                 </Suspense>
               }
@@ -47,13 +41,7 @@ createRoot(document.getElementById('root')!).render(
             <Route
               path="blogs/:id"
               element={
-                <Suspense
-                  fallback={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
-                      Loading Blog Post Content...
-                    </div>
-                  }
-                >
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">Loading Blog Post...</div>}>
                   <LazyBlogPostDetail />
                 </Suspense>
               }
@@ -61,13 +49,7 @@ createRoot(document.getElementById('root')!).render(
             <Route
               path="contact"
               element={
-                <Suspense
-                  fallback={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">
-                      Loading Contact Page Content...
-                    </div>
-                  }
-                >
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-700 text-2xl">Loading Contact Page...</div>}>
                   <LazyContactPage />
                 </Suspense>
               }

@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "deploy": "pnpm build && cd dist && git add . && git commit -m \"Deploy from main repo\" && git push origin main && cd .."
+    "deploy": "pnpm build && cd dist && git add . && git commit -m \"Deploy from main repo\" && git push origin && cd .. && git add dist && git commit -m \"Update dist submodule reference\" && git push origin"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",
