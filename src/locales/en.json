@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "about_me": "ABOUT ME",
+    "blogs": "BLOGS",
+    "contact": "CONTACT"
+  },
+  "contact_page": {
+    "get_in_touch": "Get in Touch",
+    "intro_text": "While this is a demo, you can imagine reaching out via:",
+    "email_label": "Email:",
+    "resume_intro": "You can also view my (fake) resume here:",
+    "view_resume": "View My Resume",
+    "resume_alert": "This would link to a resume PDF!"
+  },
+  "hero_section": {
+    "title": "0hmx"
+  },
+  "hero_image": {
+    "alt_text": "Brandon sitting in front of American flag",
+    "play_button_text_line1": "PLAY",
+    "play_button_text_line2": "THE REEL"
+  },
+  "biography": {
+    "intro": "Brandon Grebner is an American designer from Pittsburgh, PA.",
+    "paragraph1": "Brandon dropped out of college nine credits shy of a Bachelor's degree to become an entrepreneur. He started his first business with a $199 screen printing kit from eBay and a burned copy of Photoshop.",
+    "quote": "\"I want to be an example of somebody who has no education, no funding, and can still start a business.\"",
+    "paragraph2": "With a ton of heart, it can work.",
+    "signature": "Brandon"
+  },
+  "call_to_action": {
+    "title": "Ready to start your next project?",
+    "description": "Let's create something amazing together. Reach out and let's discuss your vision.",
+    "button_text": "Contact Me"
+  },
+  "blog_page": {
+    "header_title": "INSIGHTS",
+    "header_description": "Thoughts on entrepreneurship, design, and building businesses without traditional credentials.",
+    "featured_post_label": "Featured Post",
+    "read_full_article": "READ FULL ARTICLE",
+    "latest_articles": "Latest Articles",
+    "newsletter_title": "Stay Updated",
+    "newsletter_description": "Get notified when I publish new insights on entrepreneurship and design.",
+    "newsletter_placeholder": "Enter your email",
+    "newsletter_button": "Subscribe"
+  }
+}
