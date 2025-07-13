@@ -53,7 +53,7 @@ const MobileNavigation: React.FC = () => {
           <li key={index}>
             <Link
               to={item.path}
-              className={`flex flex-col items-center text-xs font-medium transition-all duration-200 p-2 rounded-lg 
+              className={`flex flex-col items-center text-xs font-medium p-2 rounded-lg 
                 ${
                   (
                     item.path === '/blogs'
@@ -61,7 +61,7 @@ const MobileNavigation: React.FC = () => {
                       : location.pathname === item.path
                   )
                     ? 'text-white scale-110'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-100'
+                    : 'text-gray-600 hover:text-white'
                 }`}
             >
               <item.icon className="w-6 h-6 mb-1" />
