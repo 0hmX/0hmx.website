@@ -79,11 +79,16 @@ const BlogPage = () => {
               <div key={post.id} className="border-l-4 border-gray-200 pl-4 relative font-mono">
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-gray-900 rounded-full"></div>
                 <h3 className="text-xl text-gray-900 mb-2">
-                  <Link to={`/blogs/${post.id}`} className="hover:text-gray-700 transition-colors duration-200">
+                  <Link
+                    to={`/blogs/${post.id}`}
+                    className="hover:text-gray-700 transition-colors duration-200"
+                  >
                     {post.title}
                   </Link>
                 </h3>
-                <p className="text-gray-600 text-sm mb-2">{post.date} • {post.readTime}</p>
+                <p className="text-gray-600 text-sm mb-2">
+                  {post.date} • {post.readTime}
+                </p>
                 <p className="text-gray-700 leading-relaxed">{post.excerpt}</p>
               </div>
             ))}

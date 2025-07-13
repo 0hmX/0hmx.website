@@ -7,11 +7,11 @@ export const blogPosts: BlogPost[] = [
     id: '1',
     title: 'The Prime/Theo Effect',
     excerpt:
-      'I wish I could say I was an internet native, but I\'m not. I joined the internet in 2017, a time when a...',
+      "I wish I could say I was an internet native, but I'm not. I joined the internet in 2017, a time when a...",
     content: BlogPost1Content,
     date: 'Jul 13, 2025',
     readTime: '5 min read',
     category: 'youtube',
-    author: '0hmx'
-  }
+    author: '0hmx',
+  },
 ];

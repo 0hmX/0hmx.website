@@ -16,19 +16,17 @@ export default {
       // This will apply to elements rendered within the 'prose' class
       theme: {
         extend: {
-          typography: ({
-            theme
-          }) => ({
+          typography: ({ theme }) => ({
             DEFAULT: {
               css: {
                 code: {
                   fontFamily: theme('fontFamily.mono'),
                 },
                 'code::before': {
-                  content: ''
+                  content: '',
                 },
                 'code::after': {
-                  content: ''
+                  content: '',
                 },
               },
             },
