@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { Home, BookOpen, Mail, Palette, BrainCircuit } from 'lucide-react';
+import { Home, BookOpen, Mail, Palette, BrainCircuit, FolderOpen } from 'lucide-react';
 import en from '../locales/en.json';
 import ThemeToggle from './ThemeToggle';
 
@@ -15,6 +15,7 @@ const navItems: NavItem[] = [
   { label: en.navigation.about_me, path: '/', icon: Home },
   { label: en.navigation.blogs, path: '/blogs', icon: BookOpen },
   { label: en.navigation.quizzes, path: '/quizzes', icon: BrainCircuit },
+  { label: en.navigation.portfolio, path: '/portfolio', icon: FolderOpen },
   { label: en.navigation.contact, path: '/contact', icon: Mail },
 ];
 

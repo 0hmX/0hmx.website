@@ -3,7 +3,8 @@
     "about_me": "ABOUT ME",
     "contact": "Contact",
     "blogs": "Blogs",
-    "quizzes": "Quizzes"
+    "quizzes": "Quizzes",
+    "portfolio": "Portfolio"
   },
   "contact_page": {
     "get_in_touch": "Get in Touch",
@@ -36,5 +37,32 @@
     "newsletter_description": "Get notified when I publish new insights on tech and design.",
     "newsletter_placeholder": "Enter your email",
     "newsletter_button": "Subscribe"
+  },
+  "portfolio_page": {
+    "header_title": "My Portfolio",
+    "header_description": "A collection of my personal projects and games.",
+    "projects": [
+      {
+        "id": "1",
+        "title": "Framework for Making AI-Generated Videos",
+        "description": "This allowed me to get 10k views in just 4 days. It features really good math videos.",
+        "link": "https://github.com/0hmX/Eui",
+        "layoutType": "large"
+      },
+      {
+        "id": "2",
+        "title": "Gameboy Emulator",
+        "description": "A Gameboy emulator made in Rust.",
+        "link": "https://github.com/0hmX/GameboyEmulatorInRust",
+        "layoutType": "small"
+      },
+      {
+        "id": "3",
+        "title": "A Platform to Make 3D Objects Using Python-like Script",
+        "description": "This was fun because it involved a lot of 3D optimization and a custom interpreter.",
+        "link": "https://github.com/0hmX/VoxelEngineForCreativity",
+        "layoutType": "medium"
+      }
+    ]
   }
 }

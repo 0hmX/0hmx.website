@@ -15,6 +15,7 @@ const LazyBlogPage = lazy(() => import('./components/BlogPage.tsx'));
 const LazyBlogPostDetail = lazy(() => import('./components/BlogPostDetail.tsx'));
 const LazyContactPage = lazy(() => import('./components/ContactPage.tsx'));
 const LazyQuizPage = lazy(() => import('./components/QuizPage.tsx'));
+const LazyPortfolioPage = lazy(() => import('./components/PortfolioPage.tsx'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -86,6 +87,20 @@ createRoot(document.getElementById('root')!).render(
                     }
                   >
                     <LazyQuizPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="portfolio"
+                element={
+                  <Suspense
+                    fallback={
+                      <div className="min-h-screen min-w-screen">
+                        <p>Loading...</p>
+                      </div>
+                    }
+                  >
+                    <LazyPortfolioPage />
                   </Suspense>
                 }
               />
