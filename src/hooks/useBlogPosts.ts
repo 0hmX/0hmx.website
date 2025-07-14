@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import  blogPosts from '../data/blogPosts';
+import blogPosts from '../data/blogPosts';
 import type { BlogPost } from '../types/blog';
+import { useDebug } from '../context/DebugContext';
 
 interface UseBlogPostsResult {
   posts: BlogPost[];
@@ -8,16 +9,17 @@ interface UseBlogPostsResult {
   error: string | null;
 }
 
-let cachedPosts: BlogPost[] | null = null; // Module-level cache
+let cachedPosts: BlogPost[] | null = null;
 
 const useBlogPosts = (): UseBlogPostsResult => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const { isDebugMode } = useDebug();
 
   useEffect(() => {
-    const fetchPosts = () => {
-      if (cachedPosts) {
+    const fetchPosts = async () => {
+      if (cachedPosts && !isDebugMode) {
         setPosts(cachedPosts);
         setIsLoading(false);
         return;
@@ -25,23 +27,30 @@ const useBlogPosts = (): UseBlogPostsResult => {
 
       setIsLoading(true);
       setError(null);
+
+      if (isDebugMode) {
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // 2-second delay
+      }
+
       try {
         const sortedPosts = [...blogPosts].sort((a, b) => {
           const dateA = new Date(a.date);
           const dateB = new Date(b.date);
-          return dateB.getTime() - dateA.getTime(); // Sort descending (newest first)
+          return dateB.getTime() - dateA.getTime();
         });
-        cachedPosts = sortedPosts; // Cache the sorted data
+        if (!isDebugMode) {
+          cachedPosts = sortedPosts;
+        }
         setPosts(sortedPosts);
-        setIsLoading(false);
       } catch (err) {
         setError('Failed to load blog posts.');
+      } finally {
         setIsLoading(false);
       }
     };
 
     fetchPosts();
-  }, []);
+  }, [isDebugMode]);
 
   return { posts, isLoading, error };
 };

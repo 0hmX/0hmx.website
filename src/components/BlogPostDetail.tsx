@@ -25,7 +25,7 @@ const BlogPostDetail: React.FC = () => {
   const LazyLoadedContent = lazy(post.content);
 
   return (
-    <div className="max-w-4xl mx-auto px-8 py-16">
+    <div className="max-w-4xl mx-auto px-4 md:px-8 py-16">
       <h1 className="text-display-md font-black text-foreground mb-4">{post.title}</h1>
       <p className="text-muted-foreground mb-8">
         {post.date} by {post.author || 'Unknown Author'}

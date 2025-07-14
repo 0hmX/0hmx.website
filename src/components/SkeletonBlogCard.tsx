@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkeletonBlogCard: React.FC = () => {
   return (
-    <div className="group cursor-pointer">
+    <div className="group cursor-pointer px-4 md:px-0">
       <div className="overflow-hidden rounded-lg mb-4">
         <div className="w-full h-48 bg-gray-300 animate-pulse"></div>
       </div>
