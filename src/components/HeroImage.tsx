@@ -22,7 +22,7 @@ const HeroImage = () => {
                   <div>{en.hero_image.play_button_text_line2}</div>
                 </div>
               </div>
-              <div className="absolute inset-0 rounded-full border-2 border-white opacity-50 animate-ping"></div>
+              <div className="absolute inset-0 rounded-full border-2 border-primary-foreground opacity-50 animate-ping"></div>
             </button>
           </div>
         </div>

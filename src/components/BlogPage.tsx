@@ -62,33 +62,33 @@ const BlogPage = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-display-lg font-black text-gray-900 leading-none tracking-tighter mb-6">
+          <h1 className="text-display-lg font-black text-foreground leading-none tracking-tighter mb-6">
             {en.blog_page.header_title}
           </h1>
-          <p className="text-body-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {en.blog_page.header_description}
           </p>
         </div>
 
         {/* Blog Timeline */}
         <div className="mb-16">
-          <h2 className="text-heading-2 font-mono text-gray-900 mb-8">Latest Articles</h2>
+          <h2 className="text-heading-2 font-mono text-foreground mb-8">Latest Articles</h2>
           <div className="space-y-8">
             {posts.map((post) => (
-              <div key={post.id} className="border-l-4 border-gray-200 pl-4 relative font-mono">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-gray-900 rounded-full"></div>
-                <h3 className="text-body-lg text-gray-900 mb-2">
+              <div key={post.id} className="border-l-4 border-border pl-4 relative font-mono">
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                <h3 className="text-body-lg text-foreground mb-2">
                   <Link
                     to={`/blogs/${post.id}`}
-                    className="hover:text-gray-700 transition-colors duration-200"
+                    className="hover:text-primary transition-colors duration-200"
                   >
                     {post.title}
                   </Link>
                 </h3>
-                <p className="text-gray-600 text-body-sm mb-2">
+                <p className="text-muted-foreground text-body-sm mb-2">
                   {post.date} • {post.readTime}
                 </p>
-                <p className="text-gray-700 leading-relaxed">{post.excerpt}</p>
+                <p className="text-foreground leading-relaxed">{post.excerpt}</p>
               </div>
             ))}
           </div>

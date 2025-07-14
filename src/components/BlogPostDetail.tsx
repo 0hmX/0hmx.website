@@ -26,11 +26,11 @@ const BlogPostDetail: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-8 py-16">
-      <h1 className="text-display-md font-black text-gray-900 mb-4">{post.title}</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-display-md font-black text-foreground mb-4">{post.title}</h1>
+      <p className="text-muted-foreground mb-8">
         {post.date} by {post.author || 'Unknown Author'}
       </p>
-      <div className="prose prose-lg max-w-none font-mono">
+      <div className="prose prose-lg max-w-none font-mono dark:prose-invert">
         <Suspense fallback={<div>Loading content...</div>}>
           <LazyLoadedContent />
         </Suspense>

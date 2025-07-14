@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { Home, BookOpen, Mail } from 'lucide-react';
+import { Home, BookOpen, Mail, Palette } from 'lucide-react';
 import en from '../locales/en.json';
+import ThemeToggle from './ThemeToggle'
 
 interface NavItem {
   label: string;
@@ -20,7 +21,7 @@ const DesktopNavigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="w-full py-6 px-8 bg-gray-50">
+    <nav className="w-full py-6 px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <ul className="flex justify-center space-x-12">
           {navItems.map((item, index) => (
@@ -29,8 +30,8 @@ const DesktopNavigation: React.FC = () => {
                 to={item.path}
                 className={`text-body-sm font-medium transition-colors duration-200 tracking-wide ${
                   location.pathname === item.path
-                    ? 'text-gray-900 border-b border-gray-900 pb-1'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-foreground border-b border-foreground pb-1'
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {item.label}
@@ -47,7 +48,7 @@ const MobileNavigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-fit max-w-[90%] bg-blue-500/20 backdrop-blur-md rounded-full shadow-xl p-3 z-50 md:hidden">
+    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-fit max-w-[90%] bg-background/90 backdrop-blur-md rounded-full shadow-xl p-3 z-50 md:hidden">
       <ul className="flex justify-around items-center gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
@@ -60,14 +61,17 @@ const MobileNavigation: React.FC = () => {
                       ? location.pathname.startsWith(item.path)
                       : location.pathname === item.path
                   )
-                    ? 'text-white scale-110'
-                    : 'text-gray-600 hover:text-white'
+                    ? 'text-primary scale-110'
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
             >
               <item.icon className="w-6 h-6 mb-1" />
             </Link>
           </li>
         ))}
+        <li className="ml-auto">
+          <ThemeToggle />
+        </li>
       </ul>
     </nav>
   );
