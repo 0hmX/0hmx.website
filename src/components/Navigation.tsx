@@ -48,7 +48,7 @@ const MobileNavigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-fit max-w-[90%] bg-background/90 backdrop-blur-md rounded-full shadow-xl p-3 z-50 md:hidden">
+    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 w-fit max-w-[90%] bg-secondary/80 backdrop-blur-md rounded-full shadow-xl p-3 z-50 md:hidden">
       <ul className="flex justify-around items-center gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
