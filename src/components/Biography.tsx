@@ -3,7 +3,7 @@ import en from '../locales/en.json';
 
 const Biography = () => {
   return (
-    <section className="w-full px-8 mb-16 font-mono">
+    <section className="w-full px-4 md:px-8 mb-12 md:mb-16 font-mono">
       <div className="max-w-6xl mx-auto">
         <div className="space-y-6">
           <p className="text-foreground leading-relaxed">{en.biography.paragraph}</p>

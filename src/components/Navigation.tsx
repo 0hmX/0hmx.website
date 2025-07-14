@@ -22,7 +22,7 @@ const DesktopNavigation: React.FC = () => {
 
   return (
     <nav className="w-full py-6 px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative">
         <ul className="flex justify-center space-x-12">
           {navItems.map((item, index) => (
             <li key={index}>
@@ -39,6 +39,9 @@ const DesktopNavigation: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="absolute top-1/2 right-0 -translate-y-1/2">
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   );
@@ -54,7 +57,7 @@ const MobileNavigation: React.FC = () => {
           <li key={index}>
             <Link
               to={item.path}
-              className={`flex flex-col items-center text-xs font-medium p-2 rounded-lg 
+              className={`flex flex-col items-center text-body-xs font-medium p-2 rounded-lg 
                 ${
                   (
                     item.path === '/blogs'

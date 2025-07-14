@@ -47,6 +47,7 @@ export default {
         'body-lg': ['1.25rem', { lineHeight: '1.5' }], // text-xl
         'body-base': ['1rem', { lineHeight: '1.6' }], // text-base
         'body-sm': ['0.875rem', { lineHeight: '1.7' }], // text-sm
+        'body-xs': ['0.75rem', { lineHeight: '1.8' }], // text-xs
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
