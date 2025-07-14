@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { Home, BookOpen, Mail, Palette } from 'lucide-react';
 import en from '../locales/en.json';
-import ThemeToggle from './ThemeToggle'
+import ThemeToggle from './ThemeToggle';
 
 interface NavItem {
   label: string;

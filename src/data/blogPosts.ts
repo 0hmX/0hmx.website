@@ -7,7 +7,8 @@ const blogPosts: BlogPost[] = [
     title: `The Prime/Theo Effect`,
     excerpt: `I wish I could say I was an internet native, but I'm not. I joined the internet in 2017, a
         time when a YouTube channel with 30 million subscri...`,
-    content: () => import('../blog-posts/1.tsx').then(module => ({ default: module.default.content })),
+    content: () =>
+      import('../blog-posts/1.tsx').then((module) => ({ default: module.default.content })),
     date: `Jul 13, 2025`,
     readTime: `5 min read`,
     category: `youtube`,
@@ -17,7 +18,8 @@ const blogPosts: BlogPost[] = [
     id: `2`,
     title: `Procrastining over not getting job`,
     excerpt: `I wanted to write something I wanted to write something`,
-    content: () => import('../blog-posts/2.tsx').then(module => ({ default: module.default.content })),
+    content: () =>
+      import('../blog-posts/2.tsx').then((module) => ({ default: module.default.content })),
     date: `Jul 14, 2025`,
     readTime: `5 min read`,
     category: `youtube`,

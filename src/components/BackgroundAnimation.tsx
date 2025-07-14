@@ -37,11 +37,7 @@ const BackgroundAnimation: React.FC = () => {
     );
   });
 
-  return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-      {balls}
-    </div>
-  );
+  return <div className="fixed inset-0 -z-10 overflow-hidden">{balls}</div>;
 };
 
 export default BackgroundAnimation;

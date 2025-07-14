@@ -17,7 +17,8 @@ const BlogPage = () => {
               {en.blog_page.header_title}
             </h1>
             <p className="text-body-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-             {en.blog_page.header_description}</p>
+              {en.blog_page.header_description}
+            </p>
           </div>
           <div className="space-y-6 md:space-y-8">
             {[...Array(3)].map((_, i) => (
