@@ -31,7 +31,7 @@ const BlogPostDetail: React.FC = () => {
         {post.date} by {post.author || 'Unknown Author'}
       </p>
       <div className="prose prose-lg max-w-none font-mono dark:prose-invert">
-        <Suspense fallback={<div>Loading content...</div>}>
+        <Suspense>
           <LazyLoadedContent />
         </Suspense>
       </div>
