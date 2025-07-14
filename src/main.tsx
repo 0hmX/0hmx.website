@@ -8,6 +8,7 @@ import HeroImage from './components/HeroImage.tsx';
 import Biography from './components/Biography.tsx';
 import SkeletonBlogCard from './components/SkeletonBlogCard.tsx';
 import SkeletonFeaturedPost from './components/SkeletonFeaturedPost.tsx';
+import Skeleton from './components/Skeleton.tsx';
 import { DebugProvider } from './context/DebugContext';
 import './index.css';
 
@@ -82,7 +83,7 @@ createRoot(document.getElementById('root')!).render(
                   <Suspense
                     fallback={
                       <div className="min-h-screen min-w-screen">
-                        <p>Loading...</p>
+                        <Skeleton />
                       </div>
                     }
                   >
@@ -96,7 +97,7 @@ createRoot(document.getElementById('root')!).render(
                   <Suspense
                     fallback={
                       <div className="min-h-screen min-w-screen">
-                        <p>Loading...</p>
+                        <Skeleton />
                       </div>
                     }
                   >
