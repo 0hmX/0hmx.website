@@ -1,8 +1,9 @@
 {
   "navigation": {
     "about_me": "ABOUT ME",
-    "blogs": "BLOGS",
-    "contact": "CONTACT"
+    "contact": "Contact",
+    "blogs": "Blogs",
+    "quizzes": "Quizzes"
   },
   "contact_page": {
     "get_in_touch": "Get in Touch",
@@ -22,7 +23,7 @@
     "play_button_text_line2": "THE REEL"
   },
   "biography": {
-    "paragraph": "Our world is just a bunch of poeple who said yes and did it! This is the utimate mantra in op.",
+    "paragraph": "Our world is just a bunch of poeple who said yes and did it",
     "signature": "ankan"
   },
   "blog_page": {

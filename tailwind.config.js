@@ -57,6 +57,7 @@ export default {
     },
   },
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography')({
       // Customizing typography to apply Fira Code to code blocks
       // This will apply to elements rendered within the 'prose' class

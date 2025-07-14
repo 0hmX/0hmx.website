@@ -14,6 +14,7 @@ import './index.css';
 const LazyBlogPage = lazy(() => import('./components/BlogPage.tsx'));
 const LazyBlogPostDetail = lazy(() => import('./components/BlogPostDetail.tsx'));
 const LazyContactPage = lazy(() => import('./components/ContactPage.tsx'));
+const LazyQuizPage = lazy(() => import('./components/QuizPage.tsx'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -71,6 +72,20 @@ createRoot(document.getElementById('root')!).render(
                     }
                   >
                     <LazyContactPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="quizzes"
+                element={
+                  <Suspense
+                    fallback={
+                      <div className="min-h-screen min-w-screen">
+                        <p>Loading...</p>
+                      </div>
+                    }
+                  >
+                    <LazyQuizPage />
                   </Suspense>
                 }
               />
