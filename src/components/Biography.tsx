@@ -10,7 +10,7 @@ const Biography = () => {
 
           {/* Signature */}
           <div className="pt-8 text-right">
-            <div className="text-5xl font-handwritten italic text-gray-800">
+            <div className="text-display-md font-handwritten italic text-gray-800">
               {en.biography.signature}
             </div>
           </div>

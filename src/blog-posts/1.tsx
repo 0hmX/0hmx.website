@@ -1,6 +1,7 @@
 import React from 'react';
+import BlogPost from '../types/blog'
 
-const BlogPost1Content: React.FC = () => {
+const Post: React.FC = () => {
   return (
     <>
       <p>
@@ -54,4 +55,14 @@ const BlogPost1Content: React.FC = () => {
   );
 };
 
-export default BlogPost1Content;
+export default {
+  id: '1',
+  title: 'The Prime/Theo Effect',
+  excerpt:
+    "I wish I could say I was an internet native, but I'm not. I joined the internet in 2017, a time when a...",
+  content: Post,
+  date: 'Jul 13, 2025',
+  readTime: '5 min read',
+  category: 'youtube',
+  author: '0hmx',
+} as BlogPost

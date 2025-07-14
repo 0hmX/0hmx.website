@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { blogPosts } from '../data/blogPosts';
-import { BlogPost } from '../types/blog';
+import  blogPosts from '../data/blogPosts';
+import type { BlogPost } from '../types/blog';
 
 interface UseBlogPostsResult {
   posts: BlogPost[];

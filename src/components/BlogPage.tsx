@@ -13,12 +13,11 @@ const BlogPage = () => {
       <section className="w-full px-8 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+            <h1 className="text-display-lg font-black text-gray-900 leading-none tracking-tighter mb-6">
               {en.blog_page.header_title}
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              {en.blog_page.header_description}
-            </p>
+            <p className="text-body-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+             {en.blog_page.header_description}</p>
           </div>
           <div className="space-y-8">
             {[...Array(3)].map((_, i) => (
@@ -34,10 +33,10 @@ const BlogPage = () => {
     return (
       <section className="w-full px-8 py-16 text-center text-red-600">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+          <h1 className="text-display-lg font-black text-gray-900 leading-none tracking-tighter mb-6">
             {en.blog_page.header_title}
           </h1>
-          <p className="text-xl max-w-2xl mx-auto leading-relaxed">Error: {error}</p>
+          <p className="text-body-lg max-w-2xl mx-auto leading-relaxed">Error: {error}</p>
         </div>
       </section>
     );
@@ -47,10 +46,10 @@ const BlogPage = () => {
     return (
       <section className="w-full px-8 py-16 text-center">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+          <h1 className="text-display-lg font-black text-gray-900 leading-none tracking-tighter mb-6">
             {en.blog_page.header_title}
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             No blog posts found.
           </p>
         </div>
@@ -63,22 +62,22 @@ const BlogPage = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-6xl md:text-8xl font-black text-gray-900 leading-none tracking-tighter mb-6">
+          <h1 className="text-display-lg font-black text-gray-900 leading-none tracking-tighter mb-6">
             {en.blog_page.header_title}
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             {en.blog_page.header_description}
           </p>
         </div>
 
         {/* Blog Timeline */}
         <div className="mb-16">
-          <h2 className="text-2xl font-mono text-gray-900 mb-8">Latest Articles</h2>
+          <h2 className="text-heading-2 font-mono text-gray-900 mb-8">Latest Articles</h2>
           <div className="space-y-8">
             {posts.map((post) => (
               <div key={post.id} className="border-l-4 border-gray-200 pl-4 relative font-mono">
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-gray-900 rounded-full"></div>
-                <h3 className="text-xl text-gray-900 mb-2">
+                <h3 className="text-body-lg text-gray-900 mb-2">
                   <Link
                     to={`/blogs/${post.id}`}
                     className="hover:text-gray-700 transition-colors duration-200"
@@ -86,7 +85,7 @@ const BlogPage = () => {
                     {post.title}
                   </Link>
                 </h3>
-                <p className="text-gray-600 text-sm mb-2">
+                <p className="text-gray-600 text-body-sm mb-2">
                   {post.date} • {post.readTime}
                 </p>
                 <p className="text-gray-700 leading-relaxed">{post.excerpt}</p>

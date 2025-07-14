@@ -35,7 +35,7 @@ createRoot(document.getElementById('root')!).render(
               element={
                 <Suspense
                   fallback={
-                    <div className="min-h-screen min-w-screen flex">
+                    <div className="min-h-screen min-w-screen">
                       <SkeletonFeaturedPost />
                     </div>
                   }
@@ -49,7 +49,7 @@ createRoot(document.getElementById('root')!).render(
               element={
                 <Suspense
                   fallback={
-                    <div className="min-h-screen min-w-screen flex">
+                    <div className="min-h-screen min-w-screen">
                       <SkeletonBlogCard />
                     </div>
                   }
@@ -63,7 +63,7 @@ createRoot(document.getElementById('root')!).render(
               element={
                 <Suspense
                   fallback={
-                    <div className="min-h-screen min-w-screen flex">
+                    <div className="min-h-screen min-w-screen">
                       <LazyBlogPostDetail />
                     </div>
                   }

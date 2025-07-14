@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import useBlogPosts from '../hooks/useBlogPosts';
 
@@ -22,14 +22,18 @@ const BlogPostDetail: React.FC = () => {
     return <div className="text-center py-16">Blog post not found.</div>;
   }
 
+  const LazyLoadedContent = lazy(post.content);
+
   return (
     <div className="max-w-4xl mx-auto px-8 py-16">
-      <h1 className="text-5xl font-black text-gray-900 mb-4">{post.title}</h1>
+      <h1 className="text-display-md font-black text-gray-900 mb-4">{post.title}</h1>
       <p className="text-gray-600 mb-8">
         {post.date} by {post.author || 'Unknown Author'}
       </p>
       <div className="prose prose-lg max-w-none font-mono">
-        <post.content />
+        <Suspense fallback={<div>Loading content...</div>}>
+          <LazyLoadedContent />
+        </Suspense>
       </div>
     </div>
   );

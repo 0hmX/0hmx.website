@@ -27,7 +27,7 @@ const DesktopNavigation: React.FC = () => {
             <li key={index}>
               <Link
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 tracking-wide ${
+                className={`text-body-sm font-medium transition-colors duration-200 tracking-wide ${
                   location.pathname === item.path
                     ? 'text-gray-900 border-b border-gray-900 pb-1'
                     : 'text-gray-600 hover:text-gray-900'
